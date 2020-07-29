@@ -1,5 +1,7 @@
 package com.mytest;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
 public class ThreadDemo {
@@ -21,6 +23,11 @@ public class ThreadDemo {
         FutureTask<String> task  = new FutureTask<String>(new MyCallable());
         Thread thread1 = new Thread(task);
         thread1.start();
+
+        //通过线程池创建线程
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        executorService.execute(new MyRunnable());
+
     }
 
 }
