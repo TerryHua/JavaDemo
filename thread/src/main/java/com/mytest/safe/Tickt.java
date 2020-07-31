@@ -13,7 +13,7 @@ public class Tickt implements Runnable {
                     e.printStackTrace();
                 }
                 String name = Thread.currentThread().getName();
-                System.out.println("线程" + name + "售票" + ticktNum--);
+                System.out.println("线程" + name + "售票" + ticktNum-- + " " + System.currentTimeMillis());
             }
         }
     }
