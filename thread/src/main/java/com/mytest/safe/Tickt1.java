@@ -9,6 +9,7 @@ public class Tickt1 implements Runnable{
 
     Object obj = new Object();
 
+    @Override
     public void run() {
         while (true) {
             synchronized (obj) {

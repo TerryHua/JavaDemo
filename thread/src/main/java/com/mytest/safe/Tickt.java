@@ -3,6 +3,8 @@ package com.mytest.safe;
 public class Tickt implements Runnable {
 
     private int ticktNum = 100;
+
+    @Override
     public void run() {
 
         while(true) {

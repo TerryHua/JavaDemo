@@ -14,6 +14,7 @@ public class Tickt3 implements Runnable {
     //定义锁对象：构造函数参数为线程是否公平获取锁true-公平；false-不公平，即由某个线程独占，默认是false
     Lock lock = new ReentrantLock(true);
 
+    @Override
     public void run() {
         while (true) {
             lock.lock();

@@ -8,7 +8,7 @@ public class Tickt2 implements Runnable {
 
     private int ticktNum = 100;
 
-
+    @Override
     public void run() {
         while (true) {
             saleTick();
